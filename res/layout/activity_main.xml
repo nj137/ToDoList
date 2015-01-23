@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.app.todolist.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/AddLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#D1D0CE"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/ListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:ems="10"
+            android:hint="@string/enter_the_list_name"
+            android:inputType="textCapWords"
+            android:padding="20dp" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/addListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ListName"
+            android:background="@null"
+            android:contentDescription="@string/add"
+            android:padding="20dp"
+            android:src="@drawable/clip"
+            android:text="@string/add"
+            android:textColor="#000000" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/parentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </ListView>
+
+</LinearLayout>
